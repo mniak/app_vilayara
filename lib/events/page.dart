@@ -1,6 +1,6 @@
 import 'package:app_comunicacao_vilayara/events/edit/page.dart';
 import 'package:app_comunicacao_vilayara/events/model.dart';
-import 'package:clipboard_manager/clipboard_manager.dart';
+import 'package:clipboard/clipboard.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -86,8 +86,8 @@ class _EventsPageState extends State<EventsPage> {
           IconButton(
             icon: Icon(Icons.copy),
             onPressed: _pageUrl != null
-                ? () {
-                    ClipboardManager.copyToClipBoard(_pageUrl.toString());
+                ? () async {
+                    await FlutterClipboard.copy(_pageUrl.toString());
                     _scaffold.currentState
                         .showSnackBar(SnackBar(content: Text("Link copiado")));
                   }

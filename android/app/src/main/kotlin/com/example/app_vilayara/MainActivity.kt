@@ -1,4 +1,4 @@
-package com.example.app_vilayara
+package net.mniak.comunicavy
 
 import io.flutter.embedding.android.FlutterActivity
 
