@@ -60,12 +60,12 @@ class _EditEventPageState extends State<EditEventPage> {
         key: _formKey,
         child: Column(
           children: [
-            new ListTile(
+            ListTile(
               leading: const Icon(Icons.description),
-              title: new TextFormField(
+              title: TextFormField(
                 autofocus: true,
                 controller: _nameController,
-                decoration: new InputDecoration(
+                decoration: InputDecoration(
                   hintText: "Nome do Evento",
                 ),
                 validator: (txt) => txt == null || txt.length < 1
@@ -73,11 +73,11 @@ class _EditEventPageState extends State<EditEventPage> {
                     : null,
               ),
             ),
-            new ListTile(
+            ListTile(
               leading: const Icon(Icons.calendar_today),
-              title: new DateTimeField(
+              title: DateTimeField(
                   controller: _dateController,
-                  decoration: new InputDecoration(
+                  decoration: InputDecoration(
                     hintText: "Data",
                   ),
                   format: _dateFormat,
@@ -99,14 +99,14 @@ class _EditEventPageState extends State<EditEventPage> {
                     }
                   }),
             ),
-            new ListTile(
+            ListTile(
               leading: const Icon(Icons.link),
-              title: new TextFormField(
+              title: TextFormField(
                 minLines: 1,
                 maxLines: 8,
                 keyboardType: TextInputType.url,
                 controller: _urlController,
-                decoration: new InputDecoration(
+                decoration: InputDecoration(
                   hintText: "Link",
                 ),
                 validator: (txt) => !isURL(txt) ? "Não é um link válido" : null,
