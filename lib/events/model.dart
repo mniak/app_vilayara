@@ -5,6 +5,7 @@ class EventModel {
   String name;
   DateTime date;
   String url;
+  bool until;
 
   EventModel() {
     date = DateTime.now();
@@ -16,6 +17,7 @@ class EventModel {
     date = DateTime.fromMillisecondsSinceEpoch(
         (data["date"] as Timestamp).millisecondsSinceEpoch);
     url = data["url"];
+    until = data["until"] ?? false;
   }
 
   Map<String, dynamic> asMap() {
@@ -24,6 +26,7 @@ class EventModel {
     map["date"] =
         Timestamp.fromMillisecondsSinceEpoch(date.millisecondsSinceEpoch);
     map["url"] = url;
+    if (until) map["until"] = true;
     return map;
   }
 }

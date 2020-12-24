@@ -47,7 +47,7 @@ class _EditEventPageState extends State<EditEventPage> {
       await FirebaseFirestore.instance
           .collection("events")
           .doc(_event.id)
-          .update(_event.asMap());
+          .set(_event.asMap());
     }
   }
 
@@ -72,6 +72,8 @@ class _EditEventPageState extends State<EditEventPage> {
                     ? "O nome não pode estar vazio"
                     : null,
               ),
+              subtitle: Text(
+                  "Não precisa colocar a data no nome, pois o site vai adicionar a data automaticamente no final"),
             ),
             ListTile(
               leading: const Icon(Icons.calendar_today),
@@ -98,6 +100,15 @@ class _EditEventPageState extends State<EditEventPage> {
                       return currentValue;
                     }
                   }),
+            ),
+            ListTile(
+              leading: Icon(Icons.hourglass_bottom),
+              title: Text("Sumir exatamente na data"),
+              subtitle: Text("Se não, expira 5 horas depois"),
+              trailing: Switch(
+                value: _event.until,
+                onChanged: (v) => setState(() => _event.until = v),
+              ),
             ),
             ListTile(
               leading: const Icon(Icons.link),
