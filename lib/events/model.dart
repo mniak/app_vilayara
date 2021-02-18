@@ -19,6 +19,7 @@ class EventModel {
         (data["date"] as Timestamp).millisecondsSinceEpoch);
     url = data["url"];
     until = data["until"] ?? false;
+    showOnDay = data["showOnDay"] ?? false;
   }
 
   Map<String, dynamic> asMap() {
