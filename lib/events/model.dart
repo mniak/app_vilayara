@@ -6,6 +6,7 @@ class EventModel {
   DateTime date;
   String url;
   bool until;
+  bool showOnDay;
 
   EventModel() {
     date = DateTime.now();
@@ -27,6 +28,7 @@ class EventModel {
         Timestamp.fromMillisecondsSinceEpoch(date.millisecondsSinceEpoch);
     map["url"] = url;
     if (until) map["until"] = true;
+    if (showOnDay) map["showOnDay"] = true;
     return map;
   }
 }
