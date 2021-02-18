@@ -114,7 +114,7 @@ class _EditEventPageState extends State<EditEventPage> {
               leading: Icon(Icons.wb_sunny),
               title: Text("Aparecer e sumir no dia"),
               subtitle: Text(
-                  "Ou seja, aparece na meia-noite do dia do evento e some à meia-noite do dia seguinte"),
+                  "Ou seja, aparece à meia-noite do dia do evento e some à meia-noite do dia seguinte"),
               trailing: Switch(
                 value: _event.showOnDay,
                 onChanged: (v) => setState(() => _event.showOnDay = v),
