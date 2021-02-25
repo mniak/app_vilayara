@@ -111,6 +111,16 @@ class _EditEventPageState extends State<EditEventPage> {
               ),
             ),
             ListTile(
+              leading: Icon(Icons.wb_sunny),
+              title: Text("Aparecer e sumir no dia"),
+              subtitle: Text(
+                  "Ou seja, aparece à meia-noite do dia do evento e some à meia-noite do dia seguinte"),
+              trailing: Switch(
+                value: _event.showOnDay,
+                onChanged: (v) => setState(() => _event.showOnDay = v),
+              ),
+            ),
+            ListTile(
               leading: const Icon(Icons.link),
               title: TextFormField(
                 minLines: 1,
