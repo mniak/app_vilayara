@@ -23,14 +23,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  firebase_core: ^0.7.0
-  firebase_auth: ^1.0.0 
+  firebase_core: ^0.5.2
+  firebase_auth: ^0.18.3 
   firebase_auth_web: ^0.3.2+1
-  firebase_database: ^6.0.0
+  firebase_database: ^4.3.0
   google_sign_in: ^4.5.6
-  cloud_firestore: ^1.0.0
+  cloud_firestore: ^0.14.3+1
   datetime_picker_formfield: ^1.0.0
-  url_launcher: ^6.0.0
+  url_launcher: ^5.7.10
   validators: ^2.0.1
   clipboard: ^0.1.2+8
 
