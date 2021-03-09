@@ -103,7 +103,7 @@ class _EditEventPageState extends State<EditEventPage> {
             ),
             ListTile(
               leading: Icon(Icons.hourglass_bottom),
-              title: Text("Sumir exatamente na data"),
+              title: Text("Sumir exatamente no horário"),
               subtitle: Text("Se não, expira 5 horas depois"),
               trailing: Switch(
                 value: _event.until,
@@ -112,9 +112,8 @@ class _EditEventPageState extends State<EditEventPage> {
             ),
             ListTile(
               leading: Icon(Icons.wb_sunny),
-              title: Text("Aparecer e sumir no dia"),
-              subtitle: Text(
-                  "Ou seja, aparece à meia-noite do dia do evento e some à meia-noite do dia seguinte"),
+              title: Text("Aparecer só no dia"),
+              subtitle: Text("Ou seja, aparece à meia-noite do dia do evento"),
               trailing: Switch(
                 value: _event.showOnDay,
                 onChanged: (v) => setState(() => _event.showOnDay = v),
