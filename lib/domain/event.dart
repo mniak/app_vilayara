@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class EventModel {
+class Event {
   String id;
   String name;
   DateTime date;
@@ -8,10 +8,10 @@ class EventModel {
   bool until;
   bool showOnDay;
 
-  EventModel() {
+  Event() {
     date = DateTime.now();
   }
-  EventModel.fromDoc(DocumentSnapshot doc) {
+  Event.fromDoc(DocumentSnapshot<Map<String, dynamic>> doc) {
     final data = doc.data();
     id = doc.id;
     name = data["name"];
