@@ -51,8 +51,6 @@ class HomePage extends StatelessWidget {
                 title: Text('Qual o link do calendário?'),
                 hintText: 'Tipicamente um .ics',
                 validator: (txt) => !isURL(txt) ? "Não é um link válido" : null,
-                initialValue:
-                    "https://adventistas.zoom.us/meeting/tZcsfu6tqzwvHNWZmXfHHffE3gBD2GOwPaYn/ics?icsToken=98tyKuGrrzItH9GStR-GRpwqBYr4KO_wmGZYgo1qphLdBQh7ZAXTZeVgFuBYP8_g",
                 maxLines: 5,
                 autoFocus: true,
                 barrierDismissible: true,
