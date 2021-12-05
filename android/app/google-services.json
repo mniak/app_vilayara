@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "649460426260",
+    "firebase_url": "https://iasd-vila-yara.firebaseio.com",
+    "project_id": "iasd-vila-yara",
+    "storage_bucket": "iasd-vila-yara.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649460426260:android:11f74a7b4a50b46cd4e901",
+        "android_client_info": {
+          "package_name": "net.mniak.app_vilayara"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649460426260-g78tti558vkdjuegmjgeapsk8ril3fdj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.mniak.app_vilayara",
+            "certificate_hash": "d23f3810f53a628ca0e0ff7375f1634b9ca1d607"
+          }
+        },
+        {
+          "client_id": "649460426260-7tqv3n112l5s1hlmfq0kgq3rhebeb0ev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlqUhwwCDiErLoyZCesdG63muj9CX3AQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649460426260-7tqv3n112l5s1hlmfq0kgq3rhebeb0ev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

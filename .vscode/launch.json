@@ -5,13 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "app_vilayara",
+            "name": "Debug on Chrome",
             "request": "launch",
             "type": "dart",
             "args": [
                 "-d", "chrome",
                 "--web-port", "8080",
             ]
+        },
+        {
+            "name": "Debug on Android",
+            "request": "launch",
+            "type": "dart",
         },
         {
             "name": "app_vilayara (profile mode)",
