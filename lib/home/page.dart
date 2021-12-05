@@ -1,4 +1,5 @@
 import 'package:app_comunicacao_vilayara/events/page.dart';
+import 'package:app_comunicacao_vilayara/import/page.dart';
 import 'package:app_comunicacao_vilayara/login/auth.dart';
 import 'package:app_comunicacao_vilayara/login/page.dart';
 import 'package:flutter/cupertino.dart';
@@ -28,10 +29,22 @@ class HomePage extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.event),
             title: Text('Gerenciar Eventos'),
-            subtitle:
-                Text('Criar, remover ou editar eventos para a página de links'),
+            subtitle: Text('Criar, remover ou editar eventos'),
             onTap: () => Navigator.of(context)
                 .push(MaterialPageRoute(builder: (_) => EventsPage())),
+          ),
+          ListTile(
+            leading: Icon(Icons.link),
+            title: Text('Gerenciar Links (Em desenvolvimento)'),
+            subtitle: Text('Criar, remover ou editar links fixos'),
+            enabled: false,
+          ),
+          ListTile(
+            leading: Icon(Icons.import_export),
+            title: Text('Importar Calendário'),
+            subtitle: Text('A partir de links para arquivos .ics'),
+            onTap: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: (_) => ImportPage())),
           ),
         ],
       ),
