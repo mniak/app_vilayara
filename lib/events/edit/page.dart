@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:validators/validators.dart';
 
-import '../model.dart';
+import '../../domain/event.dart';
 
 class EditEventPage extends StatefulWidget {
-  final EventModel _event;
+  final Event _event;
   EditEventPage(this._event);
 
   @override
@@ -18,7 +18,7 @@ class EditEventPage extends StatefulWidget {
 }
 
 class _EditEventPageState extends State<EditEventPage> {
-  final EventModel _event;
+  final Event _event;
   _EditEventPageState(this._event);
 
   final _nameController = TextEditingController();

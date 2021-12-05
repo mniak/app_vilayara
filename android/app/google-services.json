@@ -8,18 +8,18 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:649460426260:android:63fe55865e52e4d3d4e901",
+        "mobilesdk_app_id": "1:649460426260:android:11f74a7b4a50b46cd4e901",
         "android_client_info": {
-          "package_name": "net.mniak.comunicavy"
+          "package_name": "net.mniak.app_vilayara"
         }
       },
       "oauth_client": [
         {
-          "client_id": "649460426260-8cqfvl7h5hubft20udgs84kvfi0a8hkj.apps.googleusercontent.com",
+          "client_id": "649460426260-g78tti558vkdjuegmjgeapsk8ril3fdj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "net.mniak.comunicavy",
-            "certificate_hash": "6abc5b7e77af7c861357f5fd049f9e9dbe877bb0"
+            "package_name": "net.mniak.app_vilayara",
+            "certificate_hash": "d23f3810f53a628ca0e0ff7375f1634b9ca1d607"
           }
         },
         {

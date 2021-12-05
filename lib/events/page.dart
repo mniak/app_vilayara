@@ -1,5 +1,5 @@
 import 'package:app_comunicacao_vilayara/events/edit/page.dart';
-import 'package:app_comunicacao_vilayara/events/model.dart';
+import 'package:app_comunicacao_vilayara/domain/event.dart';
 import 'package:clipboard/clipboard.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
@@ -13,7 +13,7 @@ class EventsPage extends StatefulWidget {
 }
 
 class _EventsPageState extends State<EventsPage> {
-  Iterable<EventModel> _events = [];
+  Iterable<Event> _events = [];
   final _dateFormat = DateFormat("dd/MM/yyyy HH:mm");
 
   void fetchEvents() async {
@@ -22,7 +22,7 @@ class _EventsPageState extends State<EventsPage> {
         .where("date", isGreaterThan: DateTime.now().add(Duration(hours: -6)))
         .orderBy("date");
     collection.snapshots().listen((snapshot) {
-      final events = snapshot.docs.map((doc) => EventModel.fromDoc(doc));
+      final events = snapshot.docs.map((doc) => Event.fromDoc(doc));
       setState(() {
         _events = events;
       });
@@ -56,7 +56,7 @@ class _EventsPageState extends State<EventsPage> {
   Uri _pageUrl;
   GlobalKey<ScaffoldState> _scaffold = GlobalKey();
 
-  Future deleteEvent(EventModel event) async {
+  Future deleteEvent(Event event) async {
     await FirebaseFirestore.instance
         .collection("events")
         .doc(event.id)
@@ -142,7 +142,7 @@ class _EventsPageState extends State<EventsPage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () => Navigator.of(context).push(
-          MaterialPageRoute(builder: (_) => EditEventPage(EventModel())),
+          MaterialPageRoute(builder: (_) => EditEventPage(Event())),
         ),
       ),
     );

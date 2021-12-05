@@ -1,4 +1,4 @@
-package net.mniak.comunicavy
+package net.mniak.app_vilayara
 
 import io.flutter.embedding.android.FlutterActivity
 
