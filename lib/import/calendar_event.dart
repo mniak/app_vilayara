@@ -39,8 +39,8 @@ class CalendarEvent {
     return recurrenceRule
         .getInstances(start: startDate)
         // to local
-        .map((x) => DateTime.fromMillisecondsSinceEpoch(
-            startDate.millisecondsSinceEpoch))
+        .map((x) =>
+            DateTime.fromMillisecondsSinceEpoch(x.millisecondsSinceEpoch))
         .toList();
   }
 }
