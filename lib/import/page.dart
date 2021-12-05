@@ -1,3 +1,5 @@
+import 'dart:developer';
+import 'dart:html';
 import 'dart:io';
 import 'package:app_comunicacao_vilayara/domain/event.dart';
 import 'package:app_comunicacao_vilayara/import/calendar_event.dart';
@@ -33,8 +35,16 @@ class _ImportPageState extends State<ImportPage> {
   bool ready = false;
 
   static Future<CalendarEvent> fetchEvent(String link) async {
-    final response = await http.get(Uri.parse(link));
-    if (response.statusCode != 200) {
+    http.Response response;
+    try {
+      response = await http.get(Uri.parse(link));
+    } catch (e) {
+      // Try using CORS proxy if request failed
+      final uri = Uri.parse("https://vilayara7.org/api/cors_proxy")
+          .replace(queryParameters: {'u': link});
+      response = await http.get(Uri.parse(uri.toString()));
+    }
+    if (response == null || response.statusCode != 200) {
       throw Exception('O link não pôde ser carregado');
     }
 
