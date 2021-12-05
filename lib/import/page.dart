@@ -1,11 +1,7 @@
-import 'dart:developer';
-import 'dart:html';
-import 'dart:io';
 import 'package:app_comunicacao_vilayara/domain/event.dart';
 import 'package:app_comunicacao_vilayara/import/calendar_event.dart';
 import 'package:app_comunicacao_vilayara/widgets/loadable_content.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
